@@ -1,5 +1,4 @@
 n, k = map(int, input().split())
-k = str(k)
 result = 0
 
 for i in range(n+1) :
