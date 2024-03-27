@@ -26,11 +26,10 @@ class Solution {
                     }
                 }
             }
-            
-            }if(count1 > count2){
-                answer = array[array.length-1];
-            }else if(count2 == count1){ // {1,1,2,2}처럼 반복문 끝나서 위에 else if 문이 안돌아갈떄 대비
-                answer = -1;
+        }if(count2 == count1){ // {1,1,2,2}처럼 반복문 끝나서 위에 else if 문이 안돌아갈떄 대비
+            answer = -1;
+        }else if(count1 > count2){
+            answer = array[array.length-1];
         }
         return answer;
     }
