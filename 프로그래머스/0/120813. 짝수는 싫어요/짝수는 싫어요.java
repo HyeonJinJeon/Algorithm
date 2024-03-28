@@ -7,10 +7,9 @@ class Solution {
             answer = new int[n/2+1];
         }
         answer[0] = 1;
-        int index = 1;
         for(int i = 3; i <= n; i++){
             if(i % 2 != 0){
-                answer[index++] = i;
+                answer[i/2] = i;
             }
         }
         return answer;
