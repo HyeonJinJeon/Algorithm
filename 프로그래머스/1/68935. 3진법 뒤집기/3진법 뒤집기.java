@@ -5,7 +5,7 @@ class Solution {
         StringBuffer str = new StringBuffer(three);
         String rThree = str.reverse().toString();
         System.out.println(rThree);     
-        answer = Integer.valueOf(rThree, 3);
+        answer = Integer.parseInt(rThree, 3);
         return answer;
     }
 }
