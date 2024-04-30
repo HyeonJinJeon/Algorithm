@@ -4,13 +4,9 @@ class Solution {
         int answer = 0;
         Arrays.sort(score);
         int end = score.length%m;
-        int cnt = 0;
-        for(int i = score.length-1; i >= end; i--){
-            cnt++;
-            if(cnt%m == 0){
+        for(int i = score.length-m; i >= end; i-=m){
                 k = score[i];
                 answer += k*m;
-            }
         }
         return answer;
     }
