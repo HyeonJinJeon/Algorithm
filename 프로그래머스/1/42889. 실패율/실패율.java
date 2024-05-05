@@ -5,12 +5,13 @@ class Solution {
             Map<Integer, Integer> map = new HashMap<>(); // 각 스테이지 및 스테이지에 머물러있는 플레이어 수
             Map<Integer, Double> map2 = new HashMap<>();// 각 스테이지 및 스테이지 별 실패율
             double[] failRate = new double[N];
-            //map에 초기값 넣기
+            //map에 초기값 넣기(미리 key 순서대로 초기값을 넣어놓기 때문에 나중에 정렬할 필요 없음)
             for(int i = 0; i <= N+1; i++){
                 map.put(i, 0);
             }
+            //각 스테이지에 머물러 있는 플레이어 수 넣기
             for(int i = 0; i < stages.length; i++){
-                if(map.get(stages[i]) == null){
+                if(map.get(stages[i]) == 0){
                     map.put(stages[i], 1);
                 }else{
                     int val = map.get(stages[i]) + 1;
