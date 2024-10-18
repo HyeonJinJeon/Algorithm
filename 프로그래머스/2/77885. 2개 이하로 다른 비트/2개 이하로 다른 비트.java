@@ -15,11 +15,9 @@ class Solution {
                     temp /= 2;
                     base *= 2;
                 }
-
                 answer[i] = x + base - (base / 2);
             }
         }
-
         return answer;
     }
 }
