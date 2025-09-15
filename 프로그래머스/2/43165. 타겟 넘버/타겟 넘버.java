@@ -4,15 +4,15 @@ class Solution {
         dfs(numbers, 0, target, 0);
         return answer;
     }
+    // 재귀를 사용하여 DFS
     public void dfs(int[] numbers, int depth, int target, int sum){
         if(depth == numbers.length){
             if(target == sum) {
                 answer++;
             }
         } else {
-            //깊이와 numbers의 길이가 같을 때까지 재귀
-            dfs(numbers, depth + 1, target, sum + numbers[depth]);
-            dfs(numbers, depth + 1, target, sum - numbers[depth]);
+            dfs(numbers, depth + 1, target, sum + numbers[depth]); // 더하는 경우
+            dfs(numbers, depth + 1, target, sum - numbers[depth]); // 빼는 경우
         }
     }
 }
