@@ -3,6 +3,7 @@ class Solution {
     public String solution(int[] numbers) {
         String answer = "";
         String[] strArr = new String[numbers.length];
+        
         for(int i = 0; i < numbers.length; i++){
             strArr[i] = String.valueOf(numbers[i]);
         }
